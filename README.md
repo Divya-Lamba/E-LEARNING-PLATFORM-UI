@@ -19,3 +19,5 @@ This task helped me practice frontend development and designing functional web i
 his project helped me strengthen my skills in frontend development and understand how to design functional and visually appealing educational interfaces.
 
 output :
+  <img width="1908" height="1052" alt="Image" src="https://github.com/user-attachments/assets/2696f006-1242-4977-b91c-e81140a365c0" />
+  
