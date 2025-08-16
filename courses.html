@@ -1,0 +1,69 @@
+<!-- courses.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Courses | Divya's E-Learning</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Divya’s E-Learning Platform</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+    </nav>
+  </header>
+
+  <main class="courses-page">
+    <input type="text" id="searchInput" placeholder="Search courses...">
+
+    <div class="course-list" id="courseList">
+      <div class="course-card">
+        <h3>Web Development</h3>
+        <p>HTML, CSS, JS</p>
+        <a href="course-detail.html">View Course</a>
+      </div>
+
+      <div class="course-card">
+  <h3>Data Analyst</h3>
+  <p>Learn how to analyze and interpret complex datasets, build dashboards, and make data-driven decisions.</p>
+  <a herf="course-detail.html">view course</a>
+    </div>
+
+      <div class="course-card">
+        <h3>Python Basics</h3>
+        <p>Beginner Python</p>
+        <a href="course-detail.html">View Course</a>
+      </div>
+      <div class="course-card">
+        <h3>Machine Learning</h3>
+        <p>ML & AI Basics</p>
+        <a href="course-detail.html">View Course</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Divya Learning. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const input = document.getElementById('searchInput');
+    const courseList = document.getElementById('courseList');
+    const cards = courseList.getElementsByClassName('course-card');
+
+    input.addEventListener('keyup', function () {
+      const filter = input.value.toLowerCase();
+      for (let i = 0; i < cards.length; i++) {
+        const title = cards[i].getElementsByTagName('h3')[0].textContent.toLowerCase();
+        cards[i].style.display = title.includes(filter) ? "" : "none";
+      }
+    });
+  </script>
+
+</body>
+</html>
+
